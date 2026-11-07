@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kết quả Giải Pickleball – Cục CTS &amp; BMTT, FPT IS</title>
+<meta name="description" content="Bảng xếp hạng, lịch và kết quả trực tiếp Giải Pickleball Cục Chứng thực số và Bảo mật thông tin – FPT IS, 15/11/2026.">
+<style>
+:root{--bg:#f1f5f8;--card:#fff;--ink:#10202c;--mut:#5d6f7d;--line:#dbe4ea;--court:#1c5d8f;--deep:#0f3b5c;--ball:#e8d44d;--win:#17803f;--hi:#e6f3ea;--warn:#fff4d6}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1820;--card:#142531;--ink:#e7f0f5;--mut:#9bb0be;--line:#24394a;--court:#2f7fb8;--deep:#0a2a42;--win:#4cc97c;--hi:#17392a;--warn:#3a3217}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ball);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+/* Sân đấu làm hero */
+.hero{background:var(--deep);padding:20px 0 28px;color:#fff}
+.court{position:relative;border:3px solid #fff;border-radius:6px;background:var(--court);padding:28px 20px 26px;overflow:hidden}
+.court:before{content:"";position:absolute;left:0;right:0;top:50%;height:3px;background:#fff;opacity:.85}
+.court:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent calc(50% - 1.5px),rgba(255,255,255,.55) 0,rgba(255,255,255,.55) calc(50% + 1.5px),transparent 0);pointer-events:none}
+.court .in{position:relative;z-index:1;background:var(--court);display:inline-block;padding:8px 14px;border-radius:4px;max-width:100%}
+.court h1{margin:0;font-size:clamp(1.5rem,5vw,2.6rem);line-height:1.1;font-weight:800;letter-spacing:-.01em}
+.court p{margin:6px 0 0;font-size:1rem}
+.court .ball{color:var(--ball);font-weight:700}
+.info{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:14px;font-size:.95rem;color:#d4e4ee}
+nav{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:4px;overflow-x:auto}
+nav a{padding:12px 14px;text-decoration:none;font-weight:600;font-size:.95rem;white-space:nowrap;color:var(--mut);border-bottom:3px solid transparent}
+nav a:hover{color:var(--ink);border-color:var(--ball)}
+section{padding:26px 0 6px;scroll-margin-top:48px}
+h2{font-size:1.4rem;margin:0 0 12px;font-weight:800}
+h3{font-size:1.05rem;margin:0 0 8px}
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0 0;font-size:.9rem;color:var(--mut)}
+.prog{flex:1;min-width:120px;max-width:260px;height:8px;border-radius:4px;background:var(--line);overflow:hidden}
+.prog i{display:block;height:100%;background:var(--win)}
+.banner{margin:12px 0 0;padding:10px 14px;border-radius:6px;background:var(--warn);font-size:.92rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:16px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{padding:8px 6px;text-align:center;border-bottom:1px solid var(--line)}
+th{font-size:.8rem;color:var(--mut);font-weight:600}
+td.t,th.t{text-align:left}
+tr.q td{background:var(--hi)}
+tr.q td:first-child{box-shadow:inset 4px 0 var(--win)}
+td.pts{font-weight:800;font-size:1.05rem}
+.tm{display:flex;flex-direction:column;line-height:1.3}
+.tm b{font-weight:700}
+.tm span{color:var(--mut);font-size:.92em}
+.note{font-size:.85rem;color:var(--mut);margin:8px 0 0}
+.rd{margin:12px 0 6px;font-size:.85rem;font-weight:700;color:var(--mut)}
+.m{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.m .mt.r{text-align:right}
+.m .mt.r .tm{align-items:flex-end}
+.m .w .tm b{color:var(--win)}
+.sc{display:flex;gap:6px;align-items:center;font-variant-numeric:tabular-nums}
+.sc b{min-width:34px;text-align:center;padding:4px 6px;border-radius:5px;background:var(--bg);font-size:1.15rem}
+.sc b.w{background:var(--win);color:#fff}
+.sc em{font-style:normal;color:var(--mut);font-size:.9rem}
+.np .sc em{padding:4px 8px}
+.nt{grid-column:1/-1;font-size:.82rem;color:var(--mut);text-align:center}
+.mt i{color:var(--mut)}
+.ko{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:760px){.ko{grid-template-columns:1fr}}
+.ko .box{margin:0}
+.ko .box.fin{grid-column:1/-1;border:2px solid var(--ball)}
+.ko h3{margin-bottom:0}
+.champ{background:var(--deep);color:#fff;border-radius:8px;padding:18px;margin-bottom:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.champ{grid-template-columns:1fr}}
+.champ small{display:block;color:var(--ball);font-weight:700;margin-bottom:4px}
+.champ .tm span{color:#c5d8e4}
+.champ .c1 .tm b{font-size:1.2rem}
+.rules{margin:0;padding-left:20px}
+.rules li{margin:5px 0}
+.prize{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.prize div{background:var(--bg);border-radius:8px;padding:10px;text-align:center}
+.prize b{display:block;font-size:1.2rem}
+footer{padding:26px 0 40px;color:var(--mut);font-size:.88rem;text-align:center}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <div class="court"><div class="in">
+    <h1>Giải Pickleball Cục CTS &amp; BMTT</h1>
+    <p>Công ty TNHH FPT IS &middot; <span class="ball">Kết quả cập nhật trực tiếp</span></p>
+  </div></div>
+  <div class="info"><span>Chủ nhật 15/11/2026, 08h00 – 12h00</span><span>Ocean Pickleball Mỹ Đình, 99 Đ. Lê Đức Thọ, Từ Liêm, Hà Nội</span></div>
+</div></header>
+<nav><div class="wrap"><a href="#bang">Bảng xếp hạng</a><a href="#ko">Bán kết &amp; Chung kết</a><a href="#lich">Lịch &amp; kết quả</a><a href="#thele">Thể lệ</a></div></nav>
+<main class="wrap">
+  <div class="bar"><span id="status">Đang tải dữ liệu…</span><div class="prog"><i id="progbar" style="width:0"></i></div><span id="progtxt"></span></div>
+  <div id="banner"></div>
+  <div id="champ"></div>
+  <section id="bang"><h2>Bảng xếp hạng vòng bảng</h2><div class="grid2" id="tables"></div>
+    <p class="note">Hai đội đứng đầu mỗi bảng (nền xanh) vào bán kết. Thắng 1 trận được 1 điểm. Xếp hạng theo: tổng điểm, hiệu số điểm (+/–), đối đầu trực tiếp, bốc thăm.</p></section>
+  <section id="ko"><h2>Bán kết &amp; Chung kết</h2><div class="ko" id="kobox"></div></section>
+  <section id="lich"><h2>Lịch &amp; kết quả vòng bảng</h2><div class="grid2" id="fixtures"></div></section>
+  <section id="thele"><h2>Thể lệ &amp; giải thưởng</h2><div class="box">
+    <ul class="rules">
+      <li>Thi đấu đôi nam/nữ theo luật Pick US-PPA, mỗi đội 2 thành viên, 10 đội chia 2 bảng (A, B).</li>
+      <li>Vòng bảng: đấu vòng tròn một lượt, mỗi trận chạm 11 điểm.</li>
+      <li>Bán kết: Nhất A gặp Nhì B, Nhất B gặp Nhì A, chạm 11 điểm. Tranh hạng 3: hai đội thua bán kết, chạm 11 điểm.</li>
+      <li>Chung kết: chạm 11 điểm, cách biệt 2 điểm (tối đa 13 điểm).</li>
+      <li>Vận động viên có mặt trước giờ thi đấu ít nhất 15 phút. Đến muộn quá 10 phút so với giờ bắt đầu trận, BTC có quyền xử thua cuộc.</li>
+      <li>Mọi trường hợp phát sinh do BTC xem xét và quyết định, quyết định của BTC là cuối cùng.</li>
+    </ul>
+    <div class="prize"><div><b>5 triệu</b>Giải Nhất</div><div><b>3 triệu</b>Giải Nhì</div><div><b>2 triệu</b>Giải Ba</div></div>
+    <p class="note">Các hạng mục khác (MVP, phong cách…) nếu có sẽ được BTC thông báo tại sân.</p>
+  </div></section>
+</main>
+<footer>Trang tự cập nhật mỗi phút, không cần tải lại. Ban tổ chức: Cục CTS &amp; BMTT – FPT IS.</footer>
+
+<script>
+/* ====== CẤU HÌNH: chỉ cần sửa phần này ====== */
+const CFG = {
+  // Dán link CSV của Google Sheets (File > Chia sẻ > Xuất bản lên web > CSV). Để trống = chỉ hiện lịch, chưa có tỷ số.
+  SHEET_CSV_URL: "",
+  REFRESH_SECONDS: 60,
+  GROUPS: {
+    A: ["Đặng Duy Mẫn - Phạm Xuân Khang","Hoàng Sa Huỳnh - Lê Duy Sơn","Phạm Hữu Thanh - Nguyễn Thị Hà Giang","Nguyễn Minh Trung - Nguyễn Quang Linh","Đỗ Đức Mạnh - Lê Thanh Xuân"],
+    B: ["Trần Quang Hưng - Nguyễn Anh Tú","Nguyễn Đức Linh - Nguyễn Phương Lâm","Hồ Thị Khánh Loan - Chu Đức Hạnh","Trần Phong Châu - Mai Xuân Toàn","Phạm Minh Hải - Đỗ Việt Anh"]
+  }
+};
+/* ============================================ */
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const clean = s => String(s || "").replace(/\s*[-–]\s*/g, " - ").replace(/\s+/g, " ").trim().toLowerCase();
+const plain = s => String(s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/gi, "d").toLowerCase().trim();
+const num = v => { v = String(v == null ? "" : v).trim(); if (v === "") return null; const n = Number(v); return isFinite(n) ? n : null; };
+const played = m => m && m.sa != null && m.sb != null;
+
+function parseCSV(t) {
+  const rows = []; let r = [], c = "", q = false;
+  for (let i = 0; i < t.length; i++) {
+    const ch = t[i];
+    if (q) { if (ch === '"') { if (t[i + 1] === '"') { c += '"'; i++; } else q = false; } else c += ch; }
+    else if (ch === '"') q = true;
+    else if (ch === ",") { r.push(c); c = ""; }
+    else if (ch === "\n") { r.push(c); rows.push(r); r = []; c = ""; }
+    else if (ch !== "\r") c += ch;
+  }
+  if (c !== "" || r.length) { r.push(c); rows.push(r); }
+  return rows;
+}
+
+// Lịch vòng tròn 5 đội/bảng: 5 lượt, mỗi lượt 2 trận (1 đội nghỉ)
+function gen(g) {
+  const T = CFG.GROUPS[g]; let a = [0, 1, 2, 3, 4, null], out = [];
+  for (let r = 1; r <= 5; r++) {
+    for (let i = 0; i < 3; i++) {
+      const x = a[i], y = a[5 - i];
+      if (x !== null && y !== null) out.push({ g, r, a: T[x], b: T[y], sa: null, sb: null, note: "" });
+    }
+    a = [a[0], a[5], a[1], a[2], a[3], a[4]];
+  }
+  return out;
+}
+
+function build(rows) {
+  const fx = { A: gen("A"), B: gen("B") };
+  const ko = { bk1: {}, bk2: {}, h3: {}, ck: {} };
+  const warn = [];
+  (rows || []).slice(1).forEach((row, idx) => {
+    const st = plain(row[0]); if (!st) return;
+    const s1 = num(row[3]), s2 = num(row[4]), note = (row[5] || "").trim();
+    const key = /ban ket 1|bk1/.test(st) ? "bk1" : /ban ket 2|bk2/.test(st) ? "bk2" : /hang 3|tranh/.test(st) ? "h3" : /chung ket|ck/.test(st) ? "ck" : null;
+    if (key) { ko[key] = { sa: s1, sb: s2, note }; return; }
+    const g = /bang a/.test(st) ? "A" : /bang b/.test(st) ? "B" : null;
+    if (!g) return;
+    const t1 = clean(row[1]), t2 = clean(row[2]);
+    const m = fx[g].find(m => (clean(m.a) === t1 && clean(m.b) === t2) || (clean(m.a) === t2 && clean(m.b) === t1));
+    if (!m) { warn.push("Dòng " + (idx + 2)); return; }
+    const same = clean(m.a) === t1;
+    m.sa = same ? s1 : s2; m.sb = same ? s2 : s1; m.note = note;
+  });
+  return { fx, ko, warn };
+}
+
+function standings(g, fx) {
+  const t = {};
+  CFG.GROUPS[g].forEach(n => t[n] = { name: n, p: 0, w: 0, l: 0, pf: 0, pa: 0, d: 0 });
+  fx.forEach(m => {
+    if (!played(m)) return;
+    const A = t[m.a], B = t[m.b];
+    A.p++; B.p++; A.pf += m.sa; A.pa += m.sb; B.pf += m.sb; B.pa += m.sa;
+    if (m.sa > m.sb) { A.w++; B.l++; } else if (m.sb > m.sa) { B.w++; A.l++; }
+  });
+  const arr = Object.values(t); arr.forEach(x => x.d = x.pf - x.pa);
+  const h2h = (x, y) => {
+    const m = fx.find(m => (m.a === x.name && m.b === y.name) || (m.a === y.name && m.b === x.name));
+    if (!played(m)) return 0;
+    const xs = m.a === x.name ? m.sa : m.sb, ys = m.a === x.name ? m.sb : m.sa;
+    return ys - xs;
+  };
+  arr.sort((x, y) => y.w - x.w || y.d - x.d || h2h(x, y));
+  return arr;
+}
+
+const winner = m => played(m) && m.sa !== m.sb ? (m.sa > m.sb ? m.a : m.b) : null;
+const loser = m => played(m) && m.sa !== m.sb ? (m.sa > m.sb ? m.b : m.a) : null;
+const tm = n => { const p = String(n).split(" - "); return '<div class="tm"><b>' + esc(p[0]) + "</b>" + (p[1] ? "<span>" + esc(p[1]) + "</span>" : "") + "</div>"; };
+
+function card(m, la, lb) {
+  const pl = played(m), wa = pl && m.sa > m.sb, wb = pl && m.sb > m.sa;
+  return '<div class="m' + (pl ? "" : " np") + '"><div class="mt ' + (wa ? "w" : "") + '">' + (m.a ? tm(m.a) : "<i>" + la + "</i>") + "</div>" +
+    '<div class="sc">' + (pl ? '<b class="' + (wa ? "w" : "") + '">' + m.sa + "</b><em>-</em><b class=\"" + (wb ? "w" : "") + '">' + m.sb + "</b>" : "<em>vs</em>") + "</div>" +
+    '<div class="mt r ' + (wb ? "w" : "") + '">' + (m.b ? tm(m.b) : "<i>" + lb + "</i>") + "</div>" +
+    (m.note ? '<div class="nt">' + esc(m.note) + "</div>" : "") + "</div>";
+}
+
+function render(d) {
+  const S = { A: standings("A", d.fx.A), B: standings("B", d.fx.B) };
+  // Bảng xếp hạng
+  $("#tables").innerHTML = ["A", "B"].map(g => '<div class="box"><h3>Bảng ' + g + '</h3><div class="scroll"><table><thead><tr><th>#</th><th class="t">Đội</th><th>Trận</th><th>T</th><th>B</th><th>+/–</th><th>Điểm</th></tr></thead><tbody>' +
+    S[g].map((x, i) => '<tr class="' + (i < 2 ? "q" : "") + '"><td>' + (i + 1) + '</td><td class="t">' + tm(x.name) + "</td><td>" + x.p + "</td><td>" + x.w + "</td><td>" + x.l + "</td><td>" + (x.d > 0 ? "+" : "") + x.d + '</td><td class="pts">' + x.w + "</td></tr>").join("") +
+    "</tbody></table></div></div>").join("");
+  // Bán kết, hạng 3, chung kết
+  const full = g => d.fx[g].every(played), ready = full("A") && full("B");
+  const bk1 = { a: ready ? S.A[0].name : null, b: ready ? S.B[1].name : null, ...d.ko.bk1 };
+  const bk2 = { a: ready ? S.B[0].name : null, b: ready ? S.A[1].name : null, ...d.ko.bk2 };
+  const h3 = { a: loser(bk1), b: loser(bk2), ...d.ko.h3 };
+  const ck = { a: winner(bk1), b: winner(bk2), ...d.ko.ck };
+  const k = (t, m, la, lb, cls) => '<div class="box ' + (cls || "") + '"><h3>' + t + "</h3>" + card(m, la, lb) + "</div>";
+  $("#kobox").innerHTML = k("Bán kết 1", bk1, "Nhất bảng A", "Nhì bảng B") + k("Bán kết 2", bk2, "Nhất bảng B", "Nhì bảng A") +
+    k("Tranh hạng 3", h3, "Thua bán kết 1", "Thua bán kết 2") + k("Chung kết", ck, "Thắng bán kết 1", "Thắng bán kết 2", "fin");
+  // Vô địch
+  const w = winner(ck);
+  $("#champ").innerHTML = w ? '<div class="champ" style="margin-top:16px"><div class="c1"><small>Giải Nhất</small>' + tm(w) + "</div><div><small>Giải Nhì</small>" + tm(loser(ck)) + "</div><div><small>Giải Ba</small>" + (winner(h3) ? tm(winner(h3)) : "<i>Chưa xác định</i>") + "</div></div>" : "";
+  // Lịch & kết quả
+  $("#fixtures").innerHTML = ["A", "B"].map(g => {
+    let h = '<div class="box"><h3>Bảng ' + g + "</h3>", r = 0;
+    d.fx[g].forEach(m => { if (m.r !== r) { r = m.r; h += '<div class="rd">Lượt ' + r + "</div>"; } h += card(m); });
+    return h + "</div>";
+  }).join("");
+  // Tiến độ
+  const all = [...d.fx.A, ...d.fx.B, bk1, bk2, h3, ck], n = all.filter(played).length;
+  $("#progbar").style.width = (n / all.length * 100) + "%";
+  $("#progtxt").textContent = n + "/" + all.length + " trận đã có kết quả";
+  $("#banner").innerHTML = d.warn.length ? '<div class="banner">Không khớp tên đội ở: ' + esc(d.warn.join(", ")) + ". Kiểm tra lại cột Đội 1 / Đội 2 trong Google Sheets.</div>" : "";
+}
+
+let last = null;
+async function load() {
+  let rows = null, err = "";
+  if (CFG.SHEET_CSV_URL) {
+    try {
+      const u = CFG.SHEET_CSV_URL + (CFG.SHEET_CSV_URL.includes("?") ? "&" : "?") + "t=" + Date.now();
+      const res = await fetch(u, { cache: "no-store" });
+      if (!res.ok) throw new Error(res.status);
+      rows = parseCSV(await res.text());
+    } catch (e) { err = "Chưa tải được kết quả mới, đang hiển thị dữ liệu gần nhất."; }
+  }
+  if (rows || !last) last = build(rows);
+  render(last);
+  if (err) $("#banner").innerHTML = '<div class="banner">' + err + "</div>";
+  $("#status").textContent = "Cập nhật lúc " + new Date().toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" });
+}
+load();
+setInterval(load, CFG.REFRESH_SECONDS * 1000);
+</script>
+</body>
+</html>
